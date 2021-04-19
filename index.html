@@ -41,15 +41,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 function draw_rectangle() { 
 	var a_canvas = document.getElementByID("a");
-	var a_context = rect_canvas.getContext("2d);
+	var a_context = a_canvas.getContext("2d);
 	a_context.fillRect(50,25,150,50);
 	}
 	
 function draw_name(){
 	var a_canvas = document.getElementById("a");
-	var a_context = b.getContext("2d");
+	var a_context = a_canvas.getContext("2d");
 	a_context.fillText("Jenny Dang, 150, 150);
         }
+
+function draw_image(){
+	var a_canvas = document.getElementById("a");
+	var a_context = a_canvas.getContext("2d");
+	var img = new Image ();
+	img.src = 'axolotl.png';
+	a_context.draw_image(img, 100,10,100,100);
+	}
+		
 	
 </script>
 
@@ -96,6 +105,7 @@ function draw_name(){
 	
 	<a onclick="draw_rectange();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Rectangle</a>
 	<a onclick="draw_name();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Name</a>
+	<a onclick='draw_image()l" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Image</a>
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
