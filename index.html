@@ -61,11 +61,10 @@ function draw_image(){
 
 function clear_canvas(){
    var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d);
+   var a_context = a_canvas.getContext("2d");
    a_context.clearRect(0,0,300,200);
    }
-		
-	
+			
 </script>
 
 
@@ -99,7 +98,7 @@ function clear_canvas(){
 	
 <div id="content" class="w3-container">
 	
-<center><canvas id="a" width="300" height="200" style="border:1px solid #000000;">
+	<center><canvas id="a" width="300" height="200" style="border:1px solid #000000;"></canvas><center>
 	
 	<p>Content goes here.</p>
 		
@@ -109,10 +108,10 @@ function clear_canvas(){
 	
 	</div>
 	
-	<a onclick="draw_rectange();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Rectangle</a>
-	<a onclick="draw_name();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Name</a>
-	<a onclick="draw_image();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Image</a>
-	<a onclick="clear_canvas();"class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Clear Canvas</a>
+	<center><a onclick="draw_rectange();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Rectangle</a><center>
+	<center><a onclick="draw_name();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Name</a><center>
+	<center><a onclick="draw_image();" class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Draw Image</a><center>
+	<center><a onclick="clear_canvas();"class="w3-btn w3-black w3-hover-orange w3-round w3-border-orange w3-ripple">Clear Canvas</a><center>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
