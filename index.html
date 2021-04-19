@@ -35,11 +35,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-</script>
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+function draw_rect() { 
+	var rect_canvas = document.getElementByID("myCanvas");
+	var rect_context = rect_canvas.getContext("2d);
+	rect_context.fillRect(50,25,150,50);
+}
+	
+	</script>
 
+
+	
 
 
 <style>	
@@ -69,26 +78,6 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 	
-	<html>
-  <head>
-    <meta charset="utf-8"/>
-    <title>Canvas tutorial</title>
-    <script type="text/javascript">
-      function draw() {
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext) {
-          var ctx = canvas.getContext('2d');
-        }
-      }
-    </script>
-    <style type="text/css">
-      canvas { border: 1px solid black; }
-    </style>
-  </head>
-  <body onload="draw();">
-    <canvas id="tutorial" width="150" height="150"></canvas>
-  </body>
-</html>
 	
 	<p>Content goes here.</p>
 		
