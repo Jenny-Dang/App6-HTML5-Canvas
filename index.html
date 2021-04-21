@@ -50,14 +50,14 @@ function draw_name(){
    var a_context = a_canvas.getContext("2d");
    a_context.fillText("Jenny Dang", 150, 150);
    }
-
-function draw_image(){
+	
+function draw_image() { 
    var a_canvas = document.getElementById("a");
    var a_context = a_canvas.getContext("2d");
-   var axolotl = new Image ();
-   axolotl.src = "axolotl.png";
-   a_context.draw_image(axolotl, 10,15);
-   }
+   var axolotl = new Image();
+	axolotl.src = "axolotl.png";
+   a_context.drawImage(axolotl, 10, 15); 
+}
 
 function clear_canvas(){
    var a_canvas = document.getElementById("a");
@@ -102,7 +102,7 @@ function clear_canvas(){
 	
 	<center><button onclick = "draw_rectangle();" >Draw Rectangle</button><center>
 	<center><button onclick = "draw_name();" >Draw Name</button><center>
-	<center><button onclick = "draw_image();" >Draw Image</button><center>
+	<center><button onclick = "draw_image();">Draw Image</button><center>
 	<center><button onclick = "clear_canvas();" >Clear Canvas</button><center>
 		
 	<p>Content goes here.</p>
