@@ -54,8 +54,8 @@ function draw_name(){
 function draw_image(){
    var a_canvas = document.getElementById("a");
    var a_context = a_canvas.getContext("2d");
-   var img = new Image ();
-   img.src = "axolotl.png";
+   var axolotl = new Image ();
+   axolotl.src = "axolotl.png";
    a_context.draw_image(img, 10,15);
    }
 
@@ -100,7 +100,7 @@ function clear_canvas(){
 	
 	<center><canvas id = "a" width = "300" height = "200" style = "border : 1px solid #000000;"></canvas><center> 	
 	
-	<center><button onclick = "draw_rectange();" >Draw Rectangle</button><center>
+	<center><button onclick = "draw_rectangle();" >Draw Rectangle</button><center>
 	<center><button onclick = "draw_name();" >Draw Name</button><center>
 	<center><button onclick = "draw_image();" >Draw Image</button><center>
 	<center><button onclick = "clear_canvas();" >Clear Canvas</button><center>
