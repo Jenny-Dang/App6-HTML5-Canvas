@@ -3,7 +3,7 @@
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
  
 THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
- 
+
  
 Authors in chronological order of contribution:
 Tim Riedel
@@ -20,57 +20,57 @@ Brief Description of Goal of Code:
 The goal of this code is create an HTML5 drawing canvas with a border that has buttons that can draw a rectange, put my name on the canvas, load an image, and clears the canvas. 
  
 Known Issues:
-blah, blah, blah, blah
+Sometimes you may have to press draw image twice in order for it to load, but I'm unsure if that's just my computer. Otherwise, there are no issues! 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
+<!--this is the header that helps format how app 6 looks on your device-->
    <head> 
-      <title>App6---HTML5-Canvas</title>  
+      <title>App6---HTML5-Canvas</title> 
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
+<!--beinning of javascript where functions and variables are defined and created-->
 <script>
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
    alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
    console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-function draw_rectangle() { 
-   var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d");
-   a_context.fillRect(25,20,15,20);
+function draw_rectangle() { //creates function that draws my shape (rectangle)
+   var a_canvas = document.getElementById("a"); //identifies the canvas 
+   var a_context = a_canvas.getContext("2d"); // identifies the canvas 
+   a_context.fillRect(25,20,15,20); // fills the rectangle with provided coordinates and size
    }
 	
-function draw_name(){
-   var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d");
-   a_context.fillText("Jenny Dang", 150, 150);
+function draw_name(){ //creates function that draws my name
+   var a_canvas = document.getElementById("a"); // identifies the canvas
+   var a_context = a_canvas.getContext("2d"); //identifies the canvas
+   a_context.fillText("Jenny Dang", 150, 150); // writes my name onto the canvas at provided coordinates
    }
 	
-function draw_image() { 
-   var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d");
-   var bee = new Image();
-	bee.src = "bee.jpeg";
-   a_context.drawImage(bee, 215,5,70,70); 
+function draw_image() { // creates function that draws my image (a bee)
+   var a_canvas = document.getElementById("a"); // identifies the canvas
+   var a_context = a_canvas.getContext("2d"); // identifies the canvas
+   var bee = new Image(); //introducing bee variable as a new image
+	bee.src = "bee.jpeg"; //sourcing where the bee image came from, had previously uploaded into repository
+   a_context.drawImage(bee, 215,5,70,70); // places my image onto the canvas with provided coordinates and size 
 }
 
-function clear_canvas(){
-   var a_canvas = document.getElementById("a");
-   var a_context = a_canvas.getContext("2d");
-   a_context.clearRect(0,0,300,200);
+function clear_canvas(){ //creates function that clears the canvas 
+   var a_canvas = document.getElementById("a"); // identifies the canvas
+   var a_context = a_canvas.getContext("2d"); // identifies the canvas
+   a_context.clearRect(0,0,300,200); //clears the canvas by creating a rectangle over the original canvas dimensions 
    }
 			
 </script>
 
-
+<!--end of javascript where functions and variables were definded and created-->
 	
 
-
+<!--beginning of style for the app 6 page-->
 <style>	
 .body {
      margin: 0em;
@@ -90,22 +90,33 @@ function clear_canvas(){
     z-index: 1;
 }
 </style>
-
+<!--end of the style fo the app 6 page-->
+	
+	
 <body>
+<!--the header on the top of the app 6 webpage-->
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6: HTML5-Canvas</h1>
+	<h1>App 6: HTML5-Canvas</h1> 
 </div>
 	
 <div id="content" class="w3-container">
-	
+<!--codes for my canvas, which has the id of a and dimensions of 300 by 200 as well as a solid black border, centered on my page-->
 	<center><canvas id = "a" width = "300" height = "200" style = "border : 1px solid #000000;"></canvas><center> 	
 	
+	<!--a button that's centered on the page, when clicked runs the function to draw a rectangle-->
 	<center><button onclick = "draw_rectangle();" >Draw Rectangle</button><center>
+		
+	<!--a button that's centered on the page, when clicked runs the function to write my name-->
 	<center><button onclick = "draw_name();" >Draw Name</button><center>
+		
+	<!--a button that's centered on the page, when clicked runs the function to draw an image(bee)-->
 	<center><button onclick = "draw_image();">Draw Image</button><center>
+		
+	<!--a button that's centered on the page, when clicked runs the function to clear the canvas-->
 	<center><button onclick = "clear_canvas();" >Clear Canvas</button><center>
 		
-	<p>Content goes here.</p>
+	<!--additional text that helps the audience understand what app 6 is for!-->
+	<p>Try clicking on some buttons!</p>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -113,7 +124,7 @@ function clear_canvas(){
 	
 	</div>
 	
-
+<!--codes for the footer of the webpage to say DIY!-->
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
