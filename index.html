@@ -42,7 +42,7 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 function draw_rectangle() { 
    var a_canvas = document.getElementById("a");
    var a_context = a_canvas.getContext("2d");
-   a_context.fillRect(50,25,150,50);
+   a_context.fillRect(25,20,15,20);
    }
 	
 function draw_name(){
@@ -56,7 +56,7 @@ function draw_image(){
    var a_context = a_canvas.getContext("2d");
    var img = new Image ();
    img.src = "axolotl.png";
-   a_context.draw_image(img, 100,10,100,100);
+   a_context.draw_image(img, 10,15);
    }
 
 function clear_canvas(){
